@@ -22,7 +22,7 @@ This is an excellent book written by **Dave Thomson** for those who want to lean
 [![Programming Elixir](https://cloud.githubusercontent.com/assets/220788/18274557/e1e872cc-743a-11e6-9610-493c34779b2c.jpg)](https://pragprog.com/book/elixir13/programming-elixir-1-3) 
 
 ---------
- [Chapter 1 - Take the Red Pill](https://github.com/kzq/programming_elixir_exercises/blob/master/README.md)
+ [Chapter 1 - Take the Red Pill](https://github.com/kzq/programming_elixir_exercises/blob/master/chapter_1/README.md)
  
  [Chapter 2 - Pattern Matching](https://github.com/kzq/programming_elixir_exercises/blob/master/README.md)
  
