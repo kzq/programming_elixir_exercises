@@ -24,6 +24,6 @@ This is an excellent book written by **Dave Thomson** for those who want to lean
 ---------
  [Chapter 1 - Take the Red Pill](https://github.com/kzq/programming_elixir_exercises/tree/master/Chapter%201%20-%20Take%20the%20Red%20Pill)
  
- [Chapter 2 - Pattern Matching](https://github.com/kzq/programming_elixir_exercises/blob/master/README.md)
+ [Chapter 2 - Pattern Matching](https://github.com/kzq/programming_elixir_exercises/tree/master/Chapter%202%20-%20Pattern%20Matching)
  
  [Chapter 3 - Immutability](https://github.com/kzq/programming_elixir_exercises/blob/master/README.md)
