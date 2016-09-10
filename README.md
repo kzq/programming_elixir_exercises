@@ -26,4 +26,4 @@ This is an excellent book written by **Dave Thomson** for those who want to lean
  
  [Chapter 2 - Pattern Matching](https://github.com/kzq/programming_elixir_exercises/tree/master/Chapter%202%20-%20Pattern%20Matching)
  
- [Chapter 3 - Immutability](https://github.com/kzq/programming_elixir_exercises/blob/master/README.md)
+ [Chapter 3 - Immutability](https://github.com/kzq/programming_elixir_exercises/blob/master/Chapter%203%20-%20Immutability/README.md)
