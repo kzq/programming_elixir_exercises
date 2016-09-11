@@ -12,7 +12,7 @@ sum.(1+2)
 
 fun = fn ({:ok, file}) -> "Read data #{IO.read(file, :line)}"
 ```
-Last value is returned by functions automatically. Functions can be passes as arguments and in Elixir this ability of function passing is used very commonly.  
+Last value is returned by functions automatically. Functions can be passed as arguments and in Elixir this ability of function passing is used very commonly.  
 
 **& = shortcut of fn** | Short anonymous functions can be written with & notations.  &1,&2.. are parameters. 
 ```javascrip
