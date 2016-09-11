@@ -51,7 +51,8 @@ Times.double(5)
  
  **|> - The Amazing Pipe Operator** |> The operator takes the results of the expression on the **left** and pass it as the **first** argument of the function to its right.
 ```javascrip 
-timesheet_approval = Timesheet.update_timesheet([timesheet_id: 123, startTime: "2016-09-11 13:00", endTime: "2016-09-11 17:00"])
+timesheet_approval = Timesheet.update_timesheet([timesheet_id: 123, startTime: "2016-09-11 13:00", 
+endTime: "2016-09-11 17:00"])
 |> calculate_weekly_hours
 |> has_hours_exceeded
 |> send_notifications
