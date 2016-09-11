@@ -31,3 +31,5 @@ This is an excellent book written by **Dave Thomson** for those who want to lean
  [Chapter 4 - Elixir Basics](https://github.com/kzq/programming_elixir_exercises/blob/master/Chapter%204%20-%20Elixir%20Basics/README.md)
  
  [Chapter 5 - Anonymous Functions](https://github.com/kzq/programming_elixir_exercises/blob/master/Chapter%205%20-%20Anonymous%20Functions/README.md)
+ 
+ [Chapter 6 -Modules and Named Functions](https://github.com/kzq/programming_elixir_exercises/blob/master/Chapter%206%20-Modules%20and%20Named%20Functions/README.md)
