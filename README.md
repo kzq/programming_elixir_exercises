@@ -32,4 +32,6 @@ This is an excellent book written by **Dave Thomson** for those who want to lean
  
  [Chapter 5 - Anonymous Functions](https://github.com/kzq/programming_elixir_exercises/blob/master/Chapter%205%20-%20Anonymous%20Functions)
  
- [Chapter 6 -Modules and Named Functions](https://github.com/kzq/programming_elixir_exercises/blob/master/Chapter%206%20-Modules%20and%20Named%20Functions)
+ [Chapter 6 - Modules and Named Functions](https://github.com/kzq/programming_elixir_exercises/blob/master/Chapter%206%20-Modules%20and%20Named%20Functions)
+ 
+ [Chapter 7 - Lists and Recursion](https://github.com/kzq/programming_elixir_exercises/blob/master/Chapter%207%20-%20Lists%20and%20Recursion)
