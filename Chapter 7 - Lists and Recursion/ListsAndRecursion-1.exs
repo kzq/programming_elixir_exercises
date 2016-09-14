@@ -1,12 +1,11 @@
-Io.puts "Write a mapsum function that takes a list and a function. It applies the \n
-function to each element of the list and then sums the result"
+IO.puts "Write a mapsum function that takes a list and a function. It applies the \nfunction to each element of the list and then sums the result"
 
 defmodule MapSum do
   def mapsum(list,func) do
-    mapsum(list,0,func)  
+    _mapsum(list,0,func)  
   end  
-  def mapsum([],value,_func), do: value
-  def mapsum([head | tail],value,func) do
-    mapsum(tail,value+func.(head),func),func)
+  def _mapsum([],value,_func), do: value
+  def _mapsum([head | tail],value,func) do
+    _mapsum(tail,value+func.(head),func)
   end
 end
