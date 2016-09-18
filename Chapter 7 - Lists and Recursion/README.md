@@ -10,4 +10,4 @@ tail = [2,3,4]
 ```
 
 * Length of an empty list is 0
-* In a recursive function if we have to remember a value of a variable between function calls then we can pass it as a function parameter because we can not hold them in a global variable as in Elixir values can be changed or assigned outside the function .
+* In a recursive function if we have to remember a value of a variable between function calls then we can pass it as a function parameter because we can not hold them in a global variable as in Elixir values can not be changed or assigned outside the function .
