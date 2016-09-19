@@ -35,3 +35,9 @@ This is an excellent book written by **Dave Thomson** for those who want to lean
  [Chapter 6 - Modules and Named Functions](https://github.com/kzq/programming_elixir_exercises/blob/master/Chapter%206%20-Modules%20and%20Named%20Functions)
  
  [Chapter 7 - Lists and Recursion](https://github.com/kzq/programming_elixir_exercises/blob/master/Chapter%207%20-%20Lists%20and%20Recursion)
+
+[Chapter 8 - Dictionaries: Maps, HashDicts, Keywords, Sets, and Structs](https://github.com/kzq/programming_elixir_exercises/blob/master/Chapter%208%20-%20Dictionaries)
+
+[Chapter 9 - An Aside—What Are Types?](https://github.com/kzq/programming_elixir_exercises/blob/master/Chapter%209%20-%20An%20Aside%E2%80%94What%20Are%20Types%3F)
+
+[Chapter 10 - Processing Collections—Enum and Stream] 
