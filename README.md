@@ -40,4 +40,10 @@ This is an excellent book written by **Dave Thomson** for those who want to lean
 
 [Chapter 9 - An Aside—What Are Types?](https://github.com/kzq/programming_elixir_exercises/blob/master/Chapter%209%20-%20An%20Aside%E2%80%94What%20Are%20Types%3F)
 
-[Chapter 10 - Processing Collections—Enum and Stream] 
+[Chapter 10 - Processing Collections—Enum and Stream](https://github.com/kzq/programming_elixir_exercises/tree/master/Chapter%2010%20-%20Processing%20Collections%20-%20Enum%20and%20Stream)
+
+[Chapter 11 - Strings and Binaries](https://github.com/kzq/programming_elixir_exercises/tree/master/Chapter%2011%20-%20Strings%20and%20Binaries)
+
+[Chapter 12 - Control Flow](https://github.com/kzq/programming_elixir_exercises/tree/master/Chapter%2012%20-%20Control%20Flow)
+
+
