@@ -13,4 +13,7 @@ defmodule CliTest do
   test "count is defaulted if two values given"  do
     assert parse_args(["user", "project"]) == {"user", "project", 4} 
   end 
+  test "sort ascending orders the correct way" do
+    
+  end
 end
