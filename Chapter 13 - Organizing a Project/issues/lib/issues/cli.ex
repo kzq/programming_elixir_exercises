@@ -6,7 +6,9 @@ defmodule Issues.CLI do
   the various functions.  
   """
   def run(args) do
-    parse_args(args) 
+    args
+    |> parse_args
+    |> process  
   end
   
   @doc """
@@ -25,5 +27,19 @@ defmodule Issues.CLI do
        {_, [user, project], _} -> {user, project, @default_count}
        _ -> :help 
     end  
+  end
+
+  @doc """
+    Handles two variants, receives a three element tuple or :help atom
+    returns help text or fetch Github issues
+  """
+  def process(:help) do
+    IO.puts """
+    usage: issues <user> <project> [count | #{@default_count}]      
+    """ 
+  end
+  def process({user, project, _count}) do
+    Issues.GithubIssues.fetch(user,project)  
   end  
+
 end
