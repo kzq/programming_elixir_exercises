@@ -8,7 +8,7 @@ defmodule Issues.GithubIssues do
     |> handle_response  
   end
   def issues_url(user, project) do
-    "#{github_url}/repos/#{user}/#{project}/issues"
+    "#{@github_url}/repos/#{user}/#{project}/issues"
   end
   def handle_response({:ok, %HTTPoison.Response{status_code: 200, body: body}}), do: {:ok, Poison.decode!(body)}
   def handle_response({:ok, %HTTPoison.Response{status_code: _, body: body}}), do: {:error, Poison.decode!(body)}  

@@ -1,11 +1,12 @@
 defmodule Issues.CLI do
+  import Issues.TableFormatter, only: [print_table_for_columns: 2]
   @default_count 4
   
   @moduledoc """
   Handle the command line parsing of options and dispatch to
   the various functions.  
   """
-  def run(args) do
+  def main(args) do
     args
     |> parse_args
     |> process  
@@ -38,9 +39,12 @@ defmodule Issues.CLI do
     usage: issues <user> <project> [count | #{@default_count}]      
     """ 
   end
-  def process({user, project, _count}) do
+  def process({user, project, count}) do
     Issues.GithubIssues.fetch(user,project)
-    |>decode_response  
+    |> decode_response
+    |> sort_into_ascending_order 
+    |> Enum.take(count)
+    |> print_table_for_columns(["number","created_at","title"])  
   end  
   def decode_response({:ok, body}), do: body
   def decode_response({:error, error}) do
