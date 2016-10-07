@@ -1,15 +1,30 @@
 defmodule Issues.TableFormatter do
   import Enum, only: [ each: 2, map: 2, map_join: 3, max: 1 ]
   
+  @doc """
+  Takes a list of rows and headers. calculates the widthe of the
+  columns and print table to STDOUT  
+  """ 
   def print_table_for_columns(rows, headers) do
     data_by_columns = split_into_columns(rows, headers)
     column_widths = widths_of(data_by_columns)
     format = format_for(column_widths)
-    puts_one_line_in_columns headers, format
+    puts_one_line_in_columns(headers, format)
     IO.puts separator(column_widths)
     puts_in_columns data_by_columns, format
   end
-
+ 
+  @doc """
+  Given list of rows extracted values of given columns
+  
+  ## Example 
+  
+    iex> list = [Enum.into([{"a","1"},{"b","2"},{"c","3"}], Map.new),
+    ...>         Enum.into([{"a","4"},{"b","5"},{"c","6"}], Map.new)]
+    iex> Issues.TableFormatter.split_into_columns(list,["a","b","c"])
+    [["1","4"],["2","5"],["3","6"]]	        
+	
+  """
   def split_into_columns(rows, headers) do
     for header <- headers do
       for row <- rows, do: printable(row[header])
@@ -32,11 +47,10 @@ defmodule Issues.TableFormatter do
   end
 
   def puts_in_columns(data_by_columns, format) do
-
-  data_by_columns
-    |> List.zip
-    |> map(&Tuple.to_list/1)
-    |> each(&puts_one_line_in_columns(&1, format))
+    data_by_columns
+      |> List.zip
+      |> map(&Tuple.to_list/1)
+      |> each(&puts_one_line_in_columns(&1, format))
   end
 
   def puts_one_line_in_columns(fields, format) do
