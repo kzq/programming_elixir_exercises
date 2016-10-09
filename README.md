@@ -46,4 +46,4 @@ This is an excellent book written by **Dave Thomson** for those who want to lean
 
 [Chapter 12 - Control Flow](https://github.com/kzq/programming_elixir_exercises/tree/master/Chapter%2012%20-%20Control%20Flow)
 
-
+[Chapter 13 - Organizing a Project] (https://github.com/kzq/programming_elixir_exercises/tree/master/Chapter%2013%20-%20Organizing%20a%20Project)
