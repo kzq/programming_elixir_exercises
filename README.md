@@ -47,3 +47,7 @@ This is an excellent book written by **Dave Thomson** for those who want to lean
 [Chapter 12 - Control Flow](https://github.com/kzq/programming_elixir_exercises/tree/master/Chapter%2012%20-%20Control%20Flow)
 
 [Chapter 13 - Organizing a Project] (https://github.com/kzq/programming_elixir_exercises/tree/master/Chapter%2013%20-%20Organizing%20a%20Project)
+
+[Chapter 14 - Working with Multiple Processes] (https://github.com/kzq/programming_elixir_exercises/tree/master/Chapter%2014%20-%20Working%20with%20Multiple%20Processes)
+
+[Chapter 15 - Nodes - The Key to Distributing Services] (https://github.com/kzq/programming_elixir_exercises/tree/master/Chapter%2015%20-%20Nodes%20-%20The%20Key%20to%20Distributing%20Services)
