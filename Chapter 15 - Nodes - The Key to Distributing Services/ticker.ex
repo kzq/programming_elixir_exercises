@@ -1,47 +1,43 @@
-# Chapter 15 - Nodes - The Key to Distributing Services
-------
+defmodule Ticker do
+  @interval 2000
+  @name :ticker
+  
+  def start do
+    pid = spawn(__MODULE__, :generator, [[]])
+    :global.register_name(@name, pid)
+  end
+  
+  def register(client_pid) do
+    send :global.whereis_name(@name), { :register, client_pid }
+  end
 
-**Node** |> As we know that Elixir runs on a Erlang VM. This VM is called a node. 
+  def generator(clients) do
+    receive do
+      { :register, pid } ->
+        IO.puts "registering #{inspect pid}"
+        generator([pid|clients])
+    after
+      @interval ->
+        IO.puts "tick"
+        Enum.each clients, fn client ->  send client, { :tick } end
+        generator(clients)
+    end
+  end
+end
 
-* A computer can have more than one node
-* Nodes can be given name to distinguish themselves over a network
-* They can be connected with other nodes across the LAN or across the internet
-* Node name is given when starting an iex session 
 
-```elixir
-  # fully qualified complete name
-  iex --name node_one@machine_name
-  # short name
-  iex --sname node_one
-  iex> Node.self
-  # node name must be fully qualified and case sensitive
-  iex> Node.connect :"node_two@dev.local"
-  iex> Node.list
-  #run process on other node
-  iex> Node.spawn(:"node_two@dev.local",func)
-```
 
-**Beam** |> Elixir code is converted into a beam code. Erlang VM only understand beam code. Therefore Erlang VM is also referred as Beam.    
-
-**Erlang VM** |> It not only runs code plus it is a complete light weight OS running on top of the operating system. It has its own events, process scheduling, memory and inter process communication mechanism.  
-
-**Node with cookie** |> A node can only be connected to other node if cookies of both nodes match. Otherwise connection will be refused.
-
-```elixir
-  iex --sname one --cookie nodecookie
-  iex> Node.get_cookie 
-```
-
-**Named PID** |> PID has three fields node number, low and high bits of the process ID. Exp. #PID<8966.59.0>
-
-* PID can be given a global name using **:global.register_name** function
-* We can list the name of all PIDs in mix.ex file that our application will register to avoid conflicting names already registered globally
-* General rule is to register your process PIDs names when your application starts
-```elixir
-  func = fn -> IO.puts "anonymous function" end
-  pid = spawn(func)
-  :global.register_name(:pidname, pid)
-  pid = :global_whereis_name(:pidname)
-  send pid, {:ok, "Got you"} 
-```   
-
+defmodule Client do
+  def start do
+    pid = spawn(__MODULE__, :receiver, [])
+    Ticker.register(pid)
+  end
+  
+  def receiver do
+    receive do
+    { :tick } ->
+      IO.puts "tock in client"
+      receiver
+    end
+  end
+end
